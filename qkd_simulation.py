@@ -117,7 +117,7 @@ for i in range(3*len(bitstring)):
       # Now that the measurements have been added to the circuit, let's run them.
     
     
-    job = execute(qc, backend = Aer.("qasm_simulator", shots = 1) 
+    job = execute(qc, backend = Aer.get_backend("qasm_simulator", shots = 1) 
     results = job.result()
     counts = results.get_counts()
     measured_bit = max(counts, key=counts.get)

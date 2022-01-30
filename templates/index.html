@@ -7,6 +7,7 @@
 		<title>enQrypt</title>
     <link rel="icon" href="static/images/white_whistle.png">
 		<link rel="stylesheet" href="static/index.css" />
+    
 
 		<!-- Google Icons -->
 		<link
@@ -36,10 +37,9 @@
 					<h3 id="message-placeholder">
 						Inbox
 					</h3>
-					<div id="receieved-messages">
-						<p></p>
-						<p></p>
-					</div>
+					<ul id="received-messages">
+
+					</ul>
 				</div>
 				<div id="send">
 					<div id="to-box">
@@ -47,7 +47,7 @@
 							id="email"
 							placeholder="Enter recipient email address"
 						/>
-						<input type="submit" id="send-message" value="Send" />
+						<input type="submit" id="send-message" value="Send"/>
 					</div>
 					<div id="message-area" name = "message">
 						<textarea
@@ -65,5 +65,8 @@
 			</p>
 			<p>&copy; 2022 Project Name Inc.</p>
 		</footer> -->
+   
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.min.js" ></script>
+    <script src= "/static/index.js"></script>
 	</body>
 </html>
