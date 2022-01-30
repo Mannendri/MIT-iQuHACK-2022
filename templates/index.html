@@ -4,9 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QKD Implementation</title>
+    <title>Project Name</title>
+    <!-- Add Icon to Title -->
+    <link rel="icon" href="">
+    <!-- Add Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Add CSS -->
+    <link rel="stylesheet" href="static/index.css">
 </head>
 <body>
-    <h1>QKD Implementation</h1>
+  <!-- Header -->
+    <header id="header" class="text-center">
+        <h1 id="title">Project Name</h1>
+        <h2 id="subtitle">Mission Statement</h2>
+    </header>
+    <!-- Dashboard -->
+    <main class="container p-3 mb-5 rounded row" id="dashboard">
+      <img src="https://www.cse.wustl.edu/~jain/cse571-07/ftp/quantum/fig1.gif" alt="" id="image">
+      <div id="grid-container" align = "center">
+        <div id="grid-inbox" class="text-center">
+          <h4>Inbox</h4>
+          <textarea name="" id="inbox" class="text-center" cols="30" rows="10" readonly></textarea>
+        </div>
+        <div id="grid-to" class="text-center">
+          <label for="recipient" class="form-label"><h4>To:</h4></label>
+            <input class="form-control" id="recipient" type="text" value="">
+        </div>
+        <div id="grid-message" class="text-center">
+            <label for="message" class="form-label"><h4>Message:</h4></label>
+            <textarea name="" class="text-center" id="message" cols="30" rows="10"></textarea>
+            <br>
+            <div id="buttons">
+              <button id="clear" type="submit" class="btn btn-warning mt-3 mb-3">CLEAR</button>
+              <button id="send" type="submit" class="btn btn-primary mt-3 mb-3">SEND</button>
+            </div>
+        </div>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer class="text-center" id="footer">
+        <p>&copy; 2022 Project Name Inc.</p>
+    </footer>
+
+    <!-- Add JS -->
+    <script src="static/index.js"></script>
+    <!-- Add Font Awesome -->
+    <script src="https://kit.fontawesome.com/6e65225e1f.js" crossorigin="anonymous"></script>
+    <!-- Add JavaScript plugins for Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </body>
 </html>
