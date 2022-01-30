@@ -1,89 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 :root {
-  --background-color: #FFF;
-  --default-text-color: #000;
-  --accent-color: rgb(93,97, 236);
-  --border-color: rgb(123, 136, 149);
-  --default-neutral: 
+	--background-color: #eee;
+	--font-color: #333;
+	--light-font-color: #555;
+	--border-color: #666;
+	--border-color-light: #999;
+	--accent-color: #ffae42;
+	--text-box-background: #f5f5f5;
+	--hover-color: #000;
+	--primary-button-color: #307cf6;
+	--primary-button-clicked-color: #0a50f0;
 }
 
+body {
+	background-color: var(--background-color);
+	color: var(--font-color);
+	font-family: "Poppins", sans-serif;
+}
+
+.material-icons {
+	font-size: 100px;
+}
+
+/* ===== Header ====== */
 #header {
-  padding-bottom: 1rem;
-  border-bottom: 1px solid var(--border-color);\
+	text-align: center;
+	padding: 2rem 0rem 1rem 0rem;
+	font-size: 18px;
+	border-bottom: 2px solid var(--border-color);
 }
 
-#image{
-  grid-column: span 2;
-  width:30vw;
-  margin: 1rem auto;
+#header > #title:hover {
+	transform: scale(1.05);
+	transition: all 0.15s ease-in-out;
+	columns: #000;
 }
 
-/* ========== GRID ========== */
-#grid-container {
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 2rem;
-  grid-template-areas:
-  ". to"
-  "inbox message";
+/* ===== Section ===== */
+
+#call-to-action {
+	margin: auto;
+	margin-top: 3rem;
+	width: 40%;
 }
 
-#grid-inbox {
-  grid-area: inbox;
+#whistleblower-action-message,
+#send-action-message {
+	display: flex;
+	flex-direction: row;
+	gap: 2rem;
 }
 
-#grid-to {
-  grid-area: to;
+#whistleblower-action-message:hover,
+#send-action-message:hover {
+	color: var(--hover-color);
 }
 
-#grid-message {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  grid-area: message;
+#send-action-message:hover {
+	color: var(--hover-color);
 }
 
+/* ============= Grid =============== */
 
-
-#dashboard {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-content:space-between;
+#grid-wrapper {
+	margin: auto;
+	margin-top: 4rem;
+	width: 80%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 10rem;
 }
 
-#buttons{
-  display: flex;
-  justify-content: space-between;
+#grid-wrapper > div {
+	border: 2px solid var(--border-color);
+	border-radius: 8%;
+	height: 20rem;
+	padding: 1rem;
+	box-shadow: 10px 10px #333;
 }
 
-#btn {
-  width: 100px;
-  margin: 1em;
+#to-box {
+	height: 35px;
+	padding-left: 0.5rem;
+	width: 100%;
+	border-bottom: 1px solid var(--border-color);
+	padding-bottom: 40px;
 }
 
-textarea{
-  width: 100%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+#to-box::after {
+	content: "";
+	display: block;
+	width: 80px;
+	height: 10px;
+	background-color: var(--background-color);
+	float: right;
 }
 
-#footer {
-  width: 100%;
-  bottom: 0;
+#email {
+	border: 1px solid var(--border-color-light);
+	display: inline;
+	margin-left: 0.3rem;
+	width: 80%;
+	height: 80%;
+	padding: 12px;
+	border-radius: 5%;
+	background-color: var(--text-box-background);
 }
 
-#footer > p:hover {
-  transform: scale(1.05);
-  transition: all 0.1s ease-in-out;
+#email::placeholder {
+	transition: color 0.3s ease;
+	color: var(--font-color);
 }
 
+#email:focus::placeholder {
+	color: transparent;
+}
+
+#send-message {
+	border: 1px solid var(--primary-button-color);
+	background-color: var(--background-color);
+	padding: 0.5rem 0.2rem;
+	width: 60px;
+	margin-left: 10px;
+	border-radius: 5px;
+}
+
+#send-message::placeholder {
+	color: var(--light-font-color);
+}
+
+#send-message:hover {
+	cursor: pointer;
+	background-color: var(--primary-button-color);
+}
+
+#send-message:active {
+	cursor: pointer;
+	background-color: var(--primary-button-clicked-color);
+}
+
+#message-area {
+	height: 90%;
+	width: 100%;
+}
+
+#message {
+	display: block;
+	width: 80%;
+	margin-left: 0.3rem;
+	margin-top: 1.5rem;
+	padding: 0.6rem;
+	font-size: 16px;
+	background-color: var(--text-box-background);
+	border-radius: 5px;
+}
+
+#message::placeholder {
+	color: var(--light-font-color);
+}
