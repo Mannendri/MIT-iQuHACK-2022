@@ -16,10 +16,11 @@ socket.on('connect',function(){
 socket.on('message', function(msg){
   let msgNode = document.createTextNode(msg);
 
+  let listMessage = document.createElement("li");
   //creates li element with message and appends it to ul
-  inbox.appendChild(document.createElement("li").appendChild(msgNode));
+  inbox.appendChild(listMessage);
+  listMessage.appendChild(msgNode)
   console.log("received message");
-
   
 });
 

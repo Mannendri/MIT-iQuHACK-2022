@@ -34,7 +34,7 @@
 			</section>
 			<section id="grid-wrapper">
 				<div id="receive">
-					<h3 id="message-placeholder">
+					<h3 id="message-title">
 						Inbox
 					</h3>
 					<ul id="received-messages">
@@ -45,9 +45,9 @@
 					<div id="to-box">
 						<input
 							id="email"
-							placeholder="Enter recipient email address"
+							placeholder="Please enter recipient's email"
 						/>
-						<input type="submit" id="send-message" value="Send"/>
+						<input type="submit" formmethod="post" formaction="/" id="send-message" value="Send" />
 					</div>
 					<div id="message-area" name = "message">
 						<textarea

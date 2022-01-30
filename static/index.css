@@ -134,6 +134,7 @@ body {
 	width: 60px;
 	margin-left: 10px;
 	border-radius: 5px;
+  transition: all 0.1s ease-in-out;
 }
 
 #send-message::placeholder {
@@ -168,4 +169,14 @@ body {
 
 #message::placeholder {
 	color: var(--light-font-color);
+}
+
+
+#received-messages {
+  height: auto;
+  padding-top: 2rem;
+}
+
+#received-messages > li {
+  list-style: none;
 }
