@@ -1,7 +1,7 @@
 # enQrypt
 ![alt text](https://github.com/Mannendri/MIT-iQuHACK-2022-enQrypt/blob/master/static/images/black_whistle.png?raw=true)
 
-## **MIT iQuHACK 2022 | QuTech Quantum Key Distribution Challenge**
+## **[MIT iQuHACK 2022](https://www.iquise.mit.edu/iQuHACK/2022-01-28) | QuTech Quantum Key Distribution Challenge**
 
 **Description:**
 For this challenge you will be tasked with creating an interface and method to use quantum key distribution to send an encrypted message between the members of your team.	
